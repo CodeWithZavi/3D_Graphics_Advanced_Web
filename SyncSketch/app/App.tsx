@@ -1,5 +1,7 @@
 "use client";
 
+// Fabric canvas app wired to Liveblocks state.
+
 import { useEffect, useRef, useState } from "react";
 import { fabric } from "fabric";
 import {

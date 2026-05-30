@@ -25,6 +25,7 @@ import { LogicPanel } from '../components/builder/sidebar/LogicPanel';
 import { PropertiesPanel } from '../components/builder/sidebar/PropertiesPanel';
 import { AIGenerationModal } from '../components/builder/AIGenerationModal';
 
+// Core 3D builder view and UI shell.
 const Builder: React.FC = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const sceneManagerRef = useRef<SceneManager | null>(null);
@@ -49,7 +50,7 @@ const Builder: React.FC = () => {
     const [_statusMessage, setStatusMessage] = useState('Ready');
     const [notification, setNotification] = useState<{ type: NotificationType; message: string } | null>(null);
     const [editMode, setEditMode] = useState<'object' | 'vertex' | 'edge' | 'face'>('object');
-    
+
     // AI Generation State
     const [isAIModalOpen, setIsAIModalOpen] = useState(false);
     const [aiMode, setAiMode] = useState<'text' | 'image'>('text');
@@ -220,13 +221,13 @@ const Builder: React.FC = () => {
         };
 
         const addedObj = appStateRef.current.addObject(obj);
-        
+
         // Use the new loadAIModel method
         await sceneManagerRef.current.loadAIModel(addedObj.id, modelUrl, addedObj.name);
-        
+
         // Update store
         addStoreObject(obj);
-        
+
         showNotification('success', 'AI Model imported successfully');
     };
 
@@ -683,7 +684,7 @@ const Builder: React.FC = () => {
                 </div>
             )}
 
-            <AIGenerationModal 
+            <AIGenerationModal
                 isOpen={isAIModalOpen}
                 onClose={() => setIsAIModalOpen(false)}
                 mode={aiMode}

@@ -1,3 +1,4 @@
+// Ininsico backend API server.
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
