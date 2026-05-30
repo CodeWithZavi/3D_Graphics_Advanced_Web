@@ -1,7 +1,7 @@
 # Mesh Creation Feature Implementation
 
 ## Overview
-This document outlines the implementation of the mesh creation feature for the Ininsico 3D Builder.
+This document outlines the implementation of the mesh creation feature for the salvatore 3D Builder.
 
 ## Files Created/Modified
 

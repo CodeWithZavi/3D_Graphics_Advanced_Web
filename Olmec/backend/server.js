@@ -19,8 +19,8 @@ app.use(cors({
     origin: [
         'http://localhost:5173',
         'http://127.0.0.1:5173',
-        'http://ininsico.artdevelopers.site',
-        'https://ininsico.artdevelopers.site'
+        'http://salvatore.artdevelopers.site',
+        'https://salvatore.artdevelopers.site'
     ],
     credentials: true,
     allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],

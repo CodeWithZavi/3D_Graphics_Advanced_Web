@@ -2,7 +2,7 @@
 
 A multi-project workspace for interactive 3D creation, collaborative design, and AI-assisted reconstruction. This repo groups three primary apps under one roof:
 
-- 3DModelBuilder: Ininsico 3D builder + marketplace-style frontend with a Node/Express API.
+- 3DModelBuilder: salvatore 3D builder + marketplace-style frontend with a Node/Express API.
 - Olmec: 3D reconstruction platform with a full web app, backend API, and optional AI tooling.
 - SyncSketch: Real-time collaborative canvas app (Liveblocks + Fabric).
 
@@ -18,10 +18,10 @@ A multi-project workspace for interactive 3D creation, collaborative design, and
 ## Projects
 
 ### 3DModelBuilder
-Ininsico 3D builder experience with a React (Vite) frontend and an Express backend. Includes an editor view, user flows, and server-side APIs for auth and model storage.
+salvatore 3D builder experience with a React (Vite) frontend and an Express backend. Includes an editor view, user flows, and server-side APIs for auth and model storage.
 
 Location:
-- Frontend: `3DModelBuilder/Ininsico`
+- Frontend: `3DModelBuilder/salvatore`
 - Backend: `3DModelBuilder/backend`
 
 ### Olmec

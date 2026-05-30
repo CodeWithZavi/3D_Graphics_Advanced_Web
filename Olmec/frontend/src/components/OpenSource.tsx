@@ -85,10 +85,10 @@ const OpenSource: React.FC = () => {
                         </h2>
 
                         <p className="text-sm text-slate-300 mb-8 leading-relaxed max-w-xs mx-auto">
-                            Ininsico is 100% open source. Audit, fork, or contribute.
+                            salvatore is 100% open source. Audit, fork, or contribute.
                         </p>
 
-                        <a href="https://github.com/Ininsico/olmec" target="_blank" rel="noopener noreferrer" className="w-full max-w-[200px]">
+                        <a href="https://github.com/salvatore/olmec" target="_blank" rel="noopener noreferrer" className="w-full max-w-[200px]">
                             <Button variant="primary" size="lg" className="w-full gap-2 text-sm bg-white text-slate-900 hover:bg-slate-200 border-none">
                                 <Github size={18} />
                                 Star Repo
@@ -123,12 +123,12 @@ const OpenSource: React.FC = () => {
                         </motion.h2>
 
                         <motion.p variants={itemVariants} className="text-xl text-slate-600 mb-10 leading-relaxed max-w-xl">
-                            We believe 3D creation tools should be accessible to everyone. That's why Ininsico is 100% open source.
+                            We believe 3D creation tools should be accessible to everyone. That's why salvatore is 100% open source.
                             Audit our code, contribute a feature, or fork it and build something entirely new.
                         </motion.p>
 
                         <motion.div variants={itemVariants} className="flex gap-4 justify-start">
-                            <a href="https://github.com/Ininsico/olmec" target="_blank" rel="noopener noreferrer">
+                            <a href="https://github.com/salvatore/olmec" target="_blank" rel="noopener noreferrer">
                                 <Button variant="dark" size="lg" className="gap-3 px-8 shadow-xl shadow-slate-900/20">
                                     <Github size={20} />
                                     Star on GitHub
@@ -174,7 +174,7 @@ const OpenSource: React.FC = () => {
                                     <div className="flex gap-2">
                                         <span className="text-emerald-400">➜</span>
                                         <span className="text-blue-400">~</span>
-                                        <span className="text-slate-300">git clone https://github.com/ininsico/olmec.git</span>
+                                        <span className="text-slate-300">git clone https://github.com/salvatore/olmec.git</span>
                                     </div>
                                     <div className="text-slate-500 pl-4 border-l-2 border-slate-800 ml-1">
                                         Cloning into 'olmec'...<br />
@@ -205,7 +205,7 @@ const OpenSource: React.FC = () => {
 
                                 {/* Call to Action in Terminal */}
                                 <a
-                                    href="https://github.com/Ininsico/olmec"
+                                    href="https://github.com/salvatore/olmec"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="block mt-8 pt-6 border-t border-white/10 group-hover:border-richred-500/30 transition-colors"

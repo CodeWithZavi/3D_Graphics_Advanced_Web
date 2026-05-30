@@ -22,7 +22,7 @@ async function fixServer() {
     console.log('Install stderr:', installResult.stderr);
 
     console.log('⚙️ Configuring Nginx...');
-    const domain = 'ininsico.artdevelopers.site';
+    const domain = 'salvatore.artdevelopers.site';
     const remotePath = '/opt/olmec';
     const nginxConfig = `server {
     listen 80;

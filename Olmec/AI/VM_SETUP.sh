@@ -48,7 +48,7 @@ echo "[*] Configuring Nginx..."
 cat > /etc/nginx/sites-available/olmec <<EOF
 server {
     listen 80;
-    server_name ininsico.artdevelopers.site;
+    server_name salvatore.artdevelopers.site;
 
     location / {
         root /opt/olmec/frontend/dist;

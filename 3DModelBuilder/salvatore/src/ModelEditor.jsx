@@ -20,7 +20,7 @@ const ModelEditor = () => {
     }, [navigate]);
     return (
         <div style={{ width: '100%', height: '100vh' }}>
-            <iframe ref={iframeRef} src="/ininsico.html" style={{ width: '100%', height: '100%', border: 'none' }} title="Ininsico-3D Model-desginer">
+            <iframe ref={iframeRef} src="/salvatore.html" style={{ width: '100%', height: '100%', border: 'none' }} title="salvatore-3D Model-desginer">
             </iframe>
         </div>
     )

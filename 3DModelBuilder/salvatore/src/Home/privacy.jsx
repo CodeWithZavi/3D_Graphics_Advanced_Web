@@ -91,10 +91,10 @@ const PrivacyPolicy = () => {
                             <div className="bg-gray-900 rounded-md px-8 py-4">
                                 <h3 className="text-xl font-bold text-blue-300 mb-2">QUESTIONS?</h3>
                                 <a 
-                                    href="mailto:privacy@ininsico.com" 
+                                    href="mailto:privacy@salvatore.com" 
                                     className="text-blue-400 hover:text-white font-medium transition-colors duration-300"
                                 >
-                                    privacy@ininsico.com
+                                    privacy@salvatore.com
                                 </a>
                             </div>
                         </div>

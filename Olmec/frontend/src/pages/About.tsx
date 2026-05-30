@@ -42,7 +42,7 @@ const About: React.FC = () => {
         {
             year: '2024',
             title: 'The Vision',
-            description: 'ININSICO was born from a simple idea: 3D modeling should be accessible, collaborative, and integrated.'
+            description: 'salvatore was born from a simple idea: 3D modeling should be accessible, collaborative, and integrated.'
         },
         {
             year: '2025',
@@ -121,7 +121,7 @@ const About: React.FC = () => {
                                 Democratizing 3D Creation
                             </h2>
                             <p className="text-lg text-slate-600 mb-6">
-                                ININSICO was founded on the belief that powerful 3D modeling tools shouldn't be locked behind expensive software or steep learning curves. We're making professional-grade 3D creation accessible to everyone.
+                                salvatore was founded on the belief that powerful 3D modeling tools shouldn't be locked behind expensive software or steep learning curves. We're making professional-grade 3D creation accessible to everyone.
                             </p>
                             <p className="text-lg text-slate-600 mb-6">
                                 Our platform combines intuitive design with advanced features, enabling both beginners and professionals to bring their 3D visions to life. From concept to creation to collaboration, we're with you every step of the way.
@@ -177,7 +177,7 @@ const About: React.FC = () => {
                             Our Core Values
                         </h2>
                         <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-                            The principles that guide everything we do at ININSICO.
+                            The principles that guide everything we do at salvatore.
                         </p>
                     </motion.div>
 
@@ -366,7 +366,7 @@ const About: React.FC = () => {
                         viewport={{ once: true }}
                     >
                         <h2 className="text-4xl lg:text-5xl font-black mb-6 text-slate-900">
-                            Join the ININSICO Community
+                            Join the salvatore Community
                         </h2>
                         <p className="text-xl mb-8 text-slate-600 max-w-2xl mx-auto">
                             Be part of a growing community of creators pushing the boundaries of 3D design.

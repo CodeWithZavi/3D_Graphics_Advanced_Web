@@ -10,7 +10,7 @@ const config = {
     username: 'root',
     password: '2136109HNsj',
     remotePath: '/opt/olmec',
-    domain: 'ininsico.artdevelopers.site',
+    domain: 'salvatore.artdevelopers.site',
     email: 'admin@artdevelopers.site'
 };
 

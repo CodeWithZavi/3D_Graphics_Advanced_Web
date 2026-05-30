@@ -18,7 +18,7 @@ const Security = () => {
                 <div className="relative bg-gradient-to-r from-blue-900/70 to-gray-900/90 px-8 py-12 sm:px-12 sm:py-16 border-b border-blue-800/50">
                     <div className="text-center">
                         <h1 className="text-4xl md:text-5xl font-bold text-blue-100 mb-4 tracking-tight">
-                            Ininsico Security Center
+                            salvatore Security Center
                         </h1>
                         <p className="text-lg text-blue-300 max-w-3xl mx-auto">
                             Protecting your 3D assets, transactions, and creative work with military-grade security
@@ -146,7 +146,7 @@ const Security = () => {
                             <h2 className="text-2xl font-bold text-blue-100">Account Security</h2>
                         </div>
                         <p className="text-blue-200 mb-4">
-                            Multi-layered protection for your Ininsico account with enterprise-grade authentication and monitoring.
+                            Multi-layered protection for your salvatore account with enterprise-grade authentication and monitoring.
                         </p>
                         <ul className="space-y-2 text-blue-300">
                             <li className="flex items-start">

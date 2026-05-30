@@ -37,4 +37,4 @@ Your machine will:
 Contributors are tracked by their `worker_id`. Top contributors get early access to "GOD MODE" features and higher resolution generation limits.
 
 ---
-*Powered by Ininsico(3D) Distributed Network*
+*Powered by salvatore(3D) Distributed Network*

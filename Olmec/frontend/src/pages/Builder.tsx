@@ -344,7 +344,7 @@ const Builder: React.FC = () => {
             {/* Header */}
             <header className="h-16 glass-nav border-b border-white/10 flex items-center px-6 relative z-50">
                 <div className="text-2xl font-black mr-8 font-serif text-richred">
-                    Ininsico Builder
+                    salvatore Builder
                 </div>
 
                 <nav className="flex space-x-1">
@@ -648,7 +648,7 @@ const Builder: React.FC = () => {
                                     <div className="w-32 h-32 glass-panel rounded-full flex items-center justify-center mb-8 mx-auto">
                                         <i className="fas fa-cube text-4xl text-richred"></i>
                                     </div>
-                                    <h3 className="text-2xl font-bold mb-4 text-black">Welcome to Ininsico Builder</h3>
+                                    <h3 className="text-2xl font-bold mb-4 text-black">Welcome to salvatore Builder</h3>
                                     <p className="text-black mb-6 max-w-md">
                                         Start creating by adding objects from the left panel
                                     </p>

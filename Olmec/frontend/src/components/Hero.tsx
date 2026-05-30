@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
                 <h1 className="text-[25vw] font-bold text-transparent tracking-tighter select-none"
                     style={{ WebkitTextStroke: '2px #1a1a1a' }}>
-                    ININSICO
+                    salvatore
                 </h1>
             </div>
 
@@ -28,8 +28,8 @@ const Hero: React.FC = () => {
                 className="relative z-10 w-64 h-64 flex items-center justify-center"
             >
                 <img
-                    src="/Ininsicologo.png"
-                    alt="Ininsico Logo"
+                    src="/salvatorelogo.png"
+                    alt="salvatore Logo"
                     className="w-full h-full object-contain"
                 />
             </motion.div>

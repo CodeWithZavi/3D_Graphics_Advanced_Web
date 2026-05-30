@@ -8,7 +8,7 @@ const FAQ = () => {
 
     const faqs = [
         {
-            question: "What is Ininsico?",
+            question: "What is salvatore?",
             answer: "The world's first AI-powered 3D modeling platform that automates asset creation while giving you full control in Unity/Blender."
         },
         {

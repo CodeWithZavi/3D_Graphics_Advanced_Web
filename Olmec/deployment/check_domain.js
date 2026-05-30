@@ -6,14 +6,14 @@ async function run() {
     const x = async (cmd) => (await ssh.execCommand(cmd));
 
     console.log('=== Domain via Cloudflare ===');
-    let r = await x('curl -s --connect-timeout 10 http://ininsico.artdevelopers.site -o /dev/null -w "%{http_code}"');
+    let r = await x('curl -s --connect-timeout 10 http://salvatore.artdevelopers.site -o /dev/null -w "%{http_code}"');
     console.log('HTTP:', r.stdout);
 
-    r = await x('curl -s --connect-timeout 10 http://ininsico.artdevelopers.site | head -c 200');
+    r = await x('curl -s --connect-timeout 10 http://salvatore.artdevelopers.site | head -c 200');
     console.log('Content:', r.stdout);
 
     console.log('\n=== API via domain ===');
-    r = await x('curl -s http://ininsico.artdevelopers.site/ai-api/health');
+    r = await x('curl -s http://salvatore.artdevelopers.site/ai-api/health');
     console.log(r.stdout);
 
     console.log('\n=== Direct IP ===');

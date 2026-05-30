@@ -1,4 +1,4 @@
-// Ininsico frontend routes and page wiring.
+// salvatore frontend routes and page wiring.
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Home/Home';
 import Contact from './Contact';

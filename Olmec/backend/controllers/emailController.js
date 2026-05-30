@@ -17,7 +17,7 @@ exports.sendEmail = async (req, res) => {
         });
 
         const mailOptions = {
-            from: `Ininsico Contact Form <${process.env.EMAIL_USER}>`,
+            from: `salvatore Contact Form <${process.env.EMAIL_USER}>`,
             to: process.env.EMAIL_USER, // Send to yourself
             replyTo: email,
             subject: `[Contact Form] ${subject} - ${firstName} ${lastName}`,

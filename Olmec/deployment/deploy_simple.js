@@ -7,10 +7,10 @@ const ssh = new NodeSSH();
 
 
 
-// PS C:\Users\arsla\Desktop\projects\Ininsico(3D)\Olmec> ssh -o ConnectTimeout=5 root@68.183.103.119 "cat /etc/nginx/sites-enabled/olmec"
+// PS C:\Users\arsla\Desktop\projects\salvatore(3D)\Olmec> ssh -o ConnectTimeout=5 root@68.183.103.119 "cat /etc/nginx/sites-enabled/olmec"
 // root@68.183.103.119's password: 
 // cat: /etc/nginx/sites-enabled/olmec: No such file or directory
-// PS C:\Users\arsla\Desktop\projects\Ininsico(3D)\Olmec> 
+// PS C:\Users\arsla\Desktop\projects\salvatore(3D)\Olmec> 
 
 // fuck u you can not even fuckin deploy a simple fuckin website how much fuckin hard is this shti show for u u fuckin cutn
 

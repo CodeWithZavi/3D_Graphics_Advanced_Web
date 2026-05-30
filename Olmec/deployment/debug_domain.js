@@ -18,11 +18,11 @@ async function run() {
     console.log(r.stdout);
 
     console.log('=== DNS ===');
-    r = await x('dig +short ininsico.artdevelopers.site 2>/dev/null || nslookup ininsico.artdevelopers.site 2>/dev/null || echo "no dns"');
+    r = await x('dig +short salvatore.artdevelopers.site 2>/dev/null || nslookup salvatore.artdevelopers.site 2>/dev/null || echo "no dns"');
     console.log(r.stdout);
 
     console.log('=== CURL TO DOMAIN ===');
-    r = await x('curl -sv --connect-timeout 5 http://ininsico.artdevelopers.site 2>&1 | head -20');
+    r = await x('curl -sv --connect-timeout 5 http://salvatore.artdevelopers.site 2>&1 | head -20');
     console.log(r.stdout + r.stderr);
 
     console.log('=== CURL TO IP ===');

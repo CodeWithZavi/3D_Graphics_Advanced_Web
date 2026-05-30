@@ -1,4 +1,4 @@
-import InstagramDesktop from "./Ininsico"
+import InstagramDesktop from "./salvatore"
 
 const MainApp = () => {
     return (

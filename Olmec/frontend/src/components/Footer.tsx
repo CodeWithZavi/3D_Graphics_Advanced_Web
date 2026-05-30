@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
                             <div className="w-8 h-8 bg-richred-700 rounded-lg flex items-center justify-center">
                                 <span className="text-white font-bold font-serif italic text-xl">I</span>
                             </div>
-                            <span className="text-2xl font-bold text-white tracking-tight">Ininsico</span>
+                            <span className="text-2xl font-bold text-white tracking-tight">salvatore</span>
                         </div>
                         <p className="text-neutral-400 leading-relaxed">
                             Democratizing 3D creation with the power of the web. Built for the future, accessible to everyone.
@@ -82,7 +82,7 @@ const Footer: React.FC = () => {
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-neutral-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-neutral-500">
                     <div>
-                        &copy; {currentYear} Ininsico. All rights reserved.
+                        &copy; {currentYear} salvatore. All rights reserved.
                     </div>
                     <div className="flex items-center gap-6">
                         <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>

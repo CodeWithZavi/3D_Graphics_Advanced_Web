@@ -1,10 +1,10 @@
 {
-  "name": "ininsico-3d",
+  "name": "salvatore-3d",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently \"npm run dev --prefix Ininsico\" \"npm start --prefix backend\""
+    "dev": "concurrently \"npm run dev --prefix salvatore\" \"npm start --prefix backend\""
   },
   "keywords": [],
   "author": "CodeWithZavi",

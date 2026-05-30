@@ -77,8 +77,8 @@ const Contact: React.FC = () => {
                                     </div>
                                     <div>
                                         <p className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-1">Email Us</p>
-                                        <a href="mailto:ininsico@gmail.com" className="text-xl font-medium text-slate-900 hover:text-[#B31212] transition-colors">
-                                            ininsico@gmail.com
+                                        <a href="mailto:salvatore@gmail.com" className="text-xl font-medium text-slate-900 hover:text-[#B31212] transition-colors">
+                                            salvatore@gmail.com
                                         </a>
                                         <p className="text-slate-500 mt-1">For general inquiries and support</p>
                                     </div>
@@ -90,7 +90,7 @@ const Contact: React.FC = () => {
                                     </div>
                                     <div>
                                         <p className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-1">Connect</p>
-                                        <a href="https://www.linkedin.com/in/arslan-rathore-ininsico" target="_blank" rel="noopener noreferrer" className="text-xl font-medium text-slate-900 hover:text-[#B31212] transition-colors">
+                                        <a href="https://www.linkedin.com/in/arslan-rathore-salvatore" target="_blank" rel="noopener noreferrer" className="text-xl font-medium text-slate-900 hover:text-[#B31212] transition-colors">
                                             Arslan Rathore
                                         </a>
                                         <p className="text-slate-500 mt-1">Follow us on LinkedIn</p>
@@ -118,7 +118,7 @@ const Contact: React.FC = () => {
                             <p className="text-slate-400 mb-8 leading-relaxed">
                                 Found a bug? Want to contribute to the codebase? The best way to get in touch effectively is via GitHub.
                             </p>
-                            <a href="https://github.com/ininsico/olmec" target="_blank" rel="noopener noreferrer">
+                            <a href="https://github.com/salvatore/olmec" target="_blank" rel="noopener noreferrer">
                                 <Button className="bg-white text-slate-900 hover:bg-slate-200 border-none w-full py-4 text-lg">
                                     Open GitHub Issues <ArrowRight className="ml-2" size={20} />
                                 </Button>

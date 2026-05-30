@@ -24,7 +24,7 @@ const Header = () => {
                         whileHover={{ scale: 1.05 }}
                         className="text-2xl font-black text-white cursor-pointer"
                     >
-                        ININSICO
+                        salvatore
                     </motion.div>
                 </Link>
                 <nav className="hidden md:flex gap-12">

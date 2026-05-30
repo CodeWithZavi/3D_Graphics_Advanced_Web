@@ -321,7 +321,7 @@ geometry/
 
 ## License
 
-Part of the Ininsico/Olmec 3D modeling application.
+Part of the salvatore/Olmec 3D modeling application.
 
 ---
 

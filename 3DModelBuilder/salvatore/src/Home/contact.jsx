@@ -94,8 +94,8 @@ const contact = () => {
                                         </svg>
                                     ),
                                     title: "Email",
-                                    content: "contact@ininsico.com",
-                                    action: "mailto:contact@ininsico.com"
+                                    content: "contact@salvatore.com",
+                                    action: "mailto:contact@salvatore.com"
                                 },
                                 {
                                     icon: (

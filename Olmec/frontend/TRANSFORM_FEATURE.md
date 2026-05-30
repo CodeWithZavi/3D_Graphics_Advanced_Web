@@ -1,7 +1,7 @@
 # Transform Properties Feature Implementation
 
 ## Overview
-This document outlines the implementation of the transform properties feature for the Ininsico 3D Builder, including Move, Rotate, Scale, Transform Reset, Annotate, and Measure tools.
+This document outlines the implementation of the transform properties feature for the salvatore 3D Builder, including Move, Rotate, Scale, Transform Reset, Annotate, and Measure tools.
 
 ## Files Created/Modified
 

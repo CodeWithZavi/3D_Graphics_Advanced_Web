@@ -151,7 +151,7 @@ const Developer = () => {
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.4 }}
                         >
-                            Build amazing 3D applications with Ininsico's powerful API and SDKs.
+                            Build amazing 3D applications with salvatore's powerful API and SDKs.
                         </motion.p>
 
                         <motion.div
@@ -190,10 +190,10 @@ const Developer = () => {
                         </h2>
 
                         <h3 className="text-xl font-bold mb-4 text-white">Installation</h3>
-                        <CodeBlock code={`npm install ininsico-sdk`} />
+                        <CodeBlock code={`npm install salvatore-sdk`} />
 
                         <h3 className="text-xl font-bold mb-4 text-white mt-8">Basic Usage</h3>
-                        <CodeBlock code={`import Ininsico from 'ininsico-sdk';\n\nconst client = new Ininsico({\n  apiKey: 'your-api-key',\n  environment: 'production'\n});\n\nconst cube = await client.models.create({\n  name: 'My First Cube',\n  vertices: [/* vertex data */]\n});`} />
+                        <CodeBlock code={`import salvatore from 'salvatore-sdk';\n\nconst client = new salvatore({\n  apiKey: 'your-api-key',\n  environment: 'production'\n});\n\nconst cube = await client.models.create({\n  name: 'My First Cube',\n  vertices: [/* vertex data */]\n});`} />
                     </motion.section>
 
                     {/* API Reference Section */}

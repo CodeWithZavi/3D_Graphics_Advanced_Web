@@ -84,7 +84,7 @@ const Termer = () => {
                                 title: "Acceptance of Terms",
                                 content: (
                                     <>
-                                        <p>By accessing ININSICO's platform ("Service"), you agree to these Terms. These apply to all users.</p>
+                                        <p>By accessing salvatore's platform ("Service"), you agree to these Terms. These apply to all users.</p>
                                         <p><strong>Restricted Uses:</strong> Strictly prohibited:</p>
                                         <ul>
                                             <li>Military/defense applications</li>
@@ -194,7 +194,7 @@ const Termer = () => {
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <motion.a
-                                    href="mailto:legal@ininsico.com"
+                                    href="mailto:legal@salvatore.com"
                                     className="px-6 py-3 bg-cyan-600 hover:bg-cyan-700 rounded-lg font-medium text-center"
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}

@@ -56,7 +56,7 @@ const Aboutpage = () => {
 
     // Text animation
     const [displayText, setDisplayText] = useState("");
-    const fullText = "Ininsico - 3D Design Revolution";
+    const fullText = "salvatore - 3D Design Revolution";
 
     // Video references
     const tutorialVideoRef = useRef(null);
@@ -298,7 +298,7 @@ const Aboutpage = () => {
                                 <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-blue-800 rounded-xl opacity-20 blur"></div>
                                 <h3 className="text-2xl font-bold text-white mb-6">The Spark</h3>
                                 <p className="text-lg text-white/80 leading-relaxed mb-6">
-                                    Two months ago, our founder Arslan Rathore laid the foundational stone of the company to be founded,He always wanted to break into quantum computing and Armory devleopement so he came up with the idea of ininsico
+                                    Two months ago, our founder Arslan Rathore laid the foundational stone of the company to be founded,He always wanted to break into quantum computing and Armory devleopement so he came up with the idea of salvatore
                                 </p>
                                 <p className="text-lg text-white/80 leading-relaxed mb-6">
                                     Within a week, we had a team of passionate designers and engineers ready to rethink 3D modeling from the ground up.
@@ -390,7 +390,7 @@ const Aboutpage = () => {
                                 {
                                     date: "Now",
                                     title: "Public Release",
-                                    content: "Ininsico available to all creators worldwide",
+                                    content: "salvatore available to all creators worldwide",
                                     milestone: "🌍",
                                     color: "from-blue-500/50 to-blue-500/20"
                                 }
@@ -437,7 +437,7 @@ const Aboutpage = () => {
                             color: 'transparent'
                         }}
                     >
-                        Learn Ininsico
+                        Learn salvatore
                     </motion.h2>
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -450,7 +450,7 @@ const Aboutpage = () => {
                         >
                             <VideoPlayer
                                 src="/videos/tutorial.mp4"
-                                title="Ininsico Tutorial"
+                                title="salvatore Tutorial"
                                 isPlaying={isTutorialPlaying}
                                 setIsPlaying={setIsTutorialPlaying}
                                 videoRef={tutorialVideoRef}
@@ -503,7 +503,7 @@ const Aboutpage = () => {
                         >
                             <h3 className="text-3xl font-bold text-white mb-6">Behind the Scenes</h3>
                             <p className="text-white/80 mb-6">
-                                See how we built Ininsico from the ground up, overcoming technical challenges to create a seamless 3D design experience.
+                                See how we built salvatore from the ground up, overcoming technical challenges to create a seamless 3D design experience.
                             </p>
                             <ul className="space-y-4">
                                 {[
@@ -541,7 +541,7 @@ const Aboutpage = () => {
                         >
                             <VideoPlayer
                                 src="/videos/making-of.mp4"
-                                title="Making of Ininsico"
+                                title="Making of salvatore"
                                 isPlaying={isMakingOfPlaying}
                                 setIsPlaying={setIsMakingOfPlaying}
                                 videoRef={makingOfVideoRef}
@@ -572,7 +572,7 @@ const Aboutpage = () => {
                             color: 'transparent'
                         }}
                     >
-                        The Ininsico Team
+                        The salvatore Team
                     </motion.h2>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 min-h-[60vh]">
@@ -650,7 +650,7 @@ const Aboutpage = () => {
                         viewport={{ once: true, margin: "-100px" }}
                     >
                         <p className="text-xl text-white/80 mb-8">
-                            Ininsico integrates with industry-standard tools while providing a unified, streamlined interface that eliminates context switching.
+                            salvatore integrates with industry-standard tools while providing a unified, streamlined interface that eliminates context switching.
                         </p>
                         <motion.button
                             className="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full text-white font-bold text-lg shadow-lg"
@@ -693,7 +693,7 @@ const Aboutpage = () => {
                             transition={{ delay: 0.3 }}
                             viewport={{ once: true, margin: "-100px" }}
                         >
-                            Join the revolution in 3D design with Ininsico's intuitive platform.
+                            Join the revolution in 3D design with salvatore's intuitive platform.
                         </motion.p>
 
                         <motion.div

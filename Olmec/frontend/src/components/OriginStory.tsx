@@ -90,7 +90,7 @@ const OriginStory: React.FC = () => {
                                     </svg>
                                 </div>
                                 <div>
-                                    <p className="text-sm font-bold text-slate-900">Ininsico Team</p>
+                                    <p className="text-sm font-bold text-slate-900">salvatore Team</p>
                                     <p className="text-xs text-slate-500">Builders & Dreamers</p>
                                 </div>
                             </div>
@@ -115,7 +115,7 @@ const OriginStory: React.FC = () => {
                         <motion.div variants={logoVariants} className="relative w-full max-w-md aspect-square flex items-center justify-center">
                             <img
                                 src="/Comsats.png"
-                                alt="Ininsico Emblem"
+                                alt="salvatore Emblem"
                                 className="w-[80%] h-[80%] object-contain drop-shadow-2xl"
                             />
                         </motion.div>

@@ -38,7 +38,7 @@ async function run() {
     console.log('[6/7] Nginx config...');
     const ng = 'server {\n' +
         '    listen 80;\n' +
-        `    server_name ininsico.artdevelopers.site ${HOST};\n` +
+        `    server_name salvatore.artdevelopers.site ${HOST};\n` +
         '    location /ai-api/ {\n' +
         '        proxy_pass http://localhost:8000/;\n' +
         '        proxy_set_header Host $host;\n' +

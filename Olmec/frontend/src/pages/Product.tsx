@@ -159,7 +159,7 @@ const Product: React.FC = () => {
             {/* Feature 3: Printing */}
             <FeatureSection
                 title="Direct-to-Print Integration"
-                description="Skip the SD cards. Connect your 3D printers directly to ININSICO and manage your entire production farm from a single dashboard."
+                description="Skip the SD cards. Connect your 3D printers directly to salvatore and manage your entire production farm from a single dashboard."
                 icon={Printer}
                 align="left"
                 points={[
@@ -201,7 +201,7 @@ const Product: React.FC = () => {
                         </h2>
 
                         <p className="text-2xl text-slate-600 leading-relaxed font-light">
-                            ININSICO is an open-source initiative to democratize manufacturing. We are just getting started, and we need your help to build the future.
+                            salvatore is an open-source initiative to democratize manufacturing. We are just getting started, and we need your help to build the future.
                         </p>
 
                         <div className="grid md:grid-cols-3 gap-8 pt-10">
@@ -218,7 +218,7 @@ const Product: React.FC = () => {
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-6 justify-center pt-10">
-                            <a href="https://github.com/ininsico/olmec" target="_blank" rel="noopener noreferrer">
+                            <a href="https://github.com/salvatore/olmec" target="_blank" rel="noopener noreferrer">
                                 <Button className="h-16 px-10 text-xl bg-slate-900 text-white hover:bg-slate-800 rounded-xl flex items-center gap-3">
                                     <Github size={24} />
                                     View on GitHub
