@@ -1,0 +1,18 @@
+{
+  "projects": [
+    {
+      "src": "Ininsico/package.json",
+      "use": "@vercel/static-build",
+      "buildCommand": "npm run build",
+      "outputDirectory": "build"
+    },
+    {
+      "src": "backend/api.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/backend/api.js" },
+    { "src": "/(.*)", "dest": "/frontend/$1" }
+  ]
+}
