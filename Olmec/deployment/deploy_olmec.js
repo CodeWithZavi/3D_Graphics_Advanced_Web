@@ -1,11 +1,13 @@
 const { NodeSSH } = require('node-ssh');
 const path = require('path');
+const { loadConfig } = require('./loadConfig');
 const ssh = new NodeSSH();
 
-const HOST = '68.183.103.119';
-const USER = 'root';
-const PASS = '2136109HNsj';
-const REMOTE = '/opt/olmec';
+const loadedConfig = loadConfig();
+const HOST = loadedConfig.DEPLOY_HOST;
+const USER = loadedConfig.DEPLOY_USERNAME;
+const PASS = loadedConfig.DEPLOY_PASSWORD;
+const REMOTE = loadedConfig.DEPLOY_REMOTE_PATH || '/opt/olmec';
 
 async function run() {
     console.log('[1/7] Connecting...');

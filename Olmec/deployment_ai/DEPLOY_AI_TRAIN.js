@@ -1,11 +1,13 @@
 const { NodeSSH } = require('../deployment/node_modules/node-ssh');
 const path = require('path');
+const { loadConfig } = require('../deployment/loadConfig');
 const ssh = new NodeSSH();
 
+const loadedConfig = loadConfig();
 const config = {
-    host: '68.183.103.119',
-    username: 'root',
-    password: '2136109HNsj',
+    host: loadedConfig.DEPLOY_HOST,
+    username: loadedConfig.DEPLOY_USERNAME,
+    password: loadedConfig.DEPLOY_PASSWORD,
     remotePath: '/opt/olmec/AI_Training'
 };
 

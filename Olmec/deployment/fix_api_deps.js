@@ -1,8 +1,9 @@
 const { NodeSSH } = require('node-ssh');
+const { getSshConfig } = require('./loadConfig');
 const ssh = new NodeSSH();
 
 async function run() {
-    await ssh.connect({ host: '68.183.103.119', username: 'root', password: '2136109HNsj' });
+    await ssh.connect(getSshConfig());
     console.log('Installing missing deps...');
     let r = await ssh.execCommand('cd /opt/olmec/AI && venv/bin/pip install uvicorn fastapi python-multipart python-dotenv requests');
     console.log(r.stdout.slice(-200));

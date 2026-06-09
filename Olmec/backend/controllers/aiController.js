@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const AI_API_URL = process.env.AI_API_URL || 'http://localhost:8000';
-const AI_API_KEY = process.env.AI_API_KEY || 'OLMEC_DEV_KEY_99';
+const AI_API_KEY = process.env.AI_API_KEY;
 
 exports.generateModel = async (req, res) => {
     try {
@@ -21,6 +21,10 @@ exports.generateModel = async (req, res) => {
             });
         }
 
+        if (!AI_API_KEY) {
+            return res.status(500).json({ error: 'AI_API_KEY not configured' });
+        }
+
         console.log(`[*] Requesting AI Generation from ${AI_API_URL}/generate`);
         
         const response = await axios.post(`${AI_API_URL}/generate`, formData, {
@@ -34,7 +38,7 @@ exports.generateModel = async (req, res) => {
         // Save the generated model to uploads
         const filename = `ai_gen_${Date.now()}.glb`;
         const outputPath = path.join(__dirname, '../uploads', filename);
-        fs.writeFileSync(outputPath, response.data);
+        await fs.promises.writeFile(outputPath, response.data);
 
         res.json({
             success: true,

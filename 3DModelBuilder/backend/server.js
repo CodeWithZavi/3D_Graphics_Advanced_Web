@@ -22,11 +22,21 @@ const nodemailer = require('nodemailer');
 // });
 const app = express();
 const PORT = process.env.PORT || 5000;
+const JWT_SECRET = process.env.JWT_SECRET || 'dev-only-jwt-secret-change-in-production';
+const CORS_ORIGINS = process.env.CORS_ORIGINS
+    ? process.env.CORS_ORIGINS.split(',')
+    : ['http://localhost:5173', 'http://127.0.0.1:5173'];
 
 // Connect to MongoDB
-mongoose.connect('mongodb://127.0.0.1:27017/salvatore_db')
+const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/salvatore_db';
+mongoose.connect(MONGO_URI)
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.error('MongoDB connection error:', err));
+
+// Validate required env vars
+if (!process.env.JWT_SECRET) {
+    console.warn('WARNING: JWT_SECRET not set. Using fallback for development only. Set JWT_SECRET in production!');
+}
 
 // Create uploads directory if it doesn't exist
 const uploadDir = 'uploads';
@@ -35,7 +45,7 @@ if (!fs.existsSync(uploadDir)) {
 }
 // Middleware
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://127.0.0.1:5173'],
+    origin: CORS_ORIGINS,
     credentials: true,
     allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
@@ -130,7 +140,7 @@ app.post('/api/models', upload.fields([
         const token = req.headers.authorization?.split(' ')[1];
         if (!token) return res.status(401).json({ error: 'No token provided' });
 
-        const decoded = jwt.verify(token, process.env.JWT_SECRET || 'your_jwt_secret');
+        const decoded = jwt.verify(token, JWT_SECRET);
 
         if (!req.files?.sceneFile) {
             return res.status(400).json({ error: 'Scene file is required' });
@@ -173,7 +183,7 @@ app.get('/api/users/:username/models', async (req, res) => {
         const token = req.headers.authorization?.split(' ')[1];
         if (!token) return res.status(401).json({ error: 'No token provided' });
 
-        jwt.verify(token, process.env.JWT_SECRET || 'your_jwt_secret');
+        jwt.verify(token, JWT_SECRET);
 
         // First find the user by username to get their ID
         const user = await User.findOne({ username: req.params.username });
@@ -211,7 +221,7 @@ const authLimiter = rateLimit({
 
 // Generate JWT token
 const generateToken = (userId) => {
-    return jwt.sign({ id: userId }, process.env.JWT_SECRET || 'your_jwt_secret', {
+    return jwt.sign({ id: userId }, JWT_SECRET, {
         expiresIn: '24h'
     });
 };
@@ -316,7 +326,7 @@ app.post('/api/upload-photo', upload.single('photo'), async (req, res) => {
             return res.status(400).json({ error: 'No file uploaded' });
         }
 
-        const decoded = jwt.verify(token, process.env.JWT_SECRET || 'your_jwt_secret');
+        const decoded = jwt.verify(token, JWT_SECRET);
         const photoPath = `/uploads/${req.file.filename}`;
 
         const updatedUser = await User.findByIdAndUpdate(
@@ -347,7 +357,7 @@ app.post('/api/complete-profile', async (req, res) => {
             return res.status(401).json({ error: 'No token provided' });
         }
 
-        const decoded = jwt.verify(token, process.env.JWT_SECRET || 'your_jwt_secret');
+        const decoded = jwt.verify(token, JWT_SECRET);
         const { bio, profession, location, interests, socialLinks } = req.body;
 
         // Validate required fields
@@ -397,7 +407,7 @@ app.get('/api/me', async (req, res) => {
         const token = req.headers.authorization?.split(' ')[1];
         if (!token) return res.status(401).json({ error: 'No token provided' });
 
-        const decoded = jwt.verify(token, process.env.JWT_SECRET || 'your_jwt_secret');
+        const decoded = jwt.verify(token, JWT_SECRET);
         const user = await User.findById(decoded.id).select('-password');
 
         if (!user) return res.status(404).json({ error: 'User not found' });
@@ -441,7 +451,7 @@ app.get('/api/current-user-profile', async (req, res) => {
             return res.status(401).json({ error: 'No token provided' });
         }
 
-        const decoded = jwt.verify(token, process.env.JWT_SECRET || 'your_jwt_secret');
+        const decoded = jwt.verify(token, JWT_SECRET);
         const user = await User.findById(decoded.id).select('username profile');
 
         if (!user) {
@@ -475,7 +485,7 @@ app.get('/api/users/:username', async (req, res) => {
             return res.status(401).json({ error: 'No token provided' });
         }
 
-        jwt.verify(token, process.env.JWT_SECRET || 'your_jwt_secret');
+        jwt.verify(token, JWT_SECRET);
 
         const user = await User.findOne({ username: req.params.username })
             .select('-password -email');
@@ -522,7 +532,7 @@ app.get('/api/check-profile', async (req, res) => {
             return res.status(401).json({ error: 'No token provided' });
         }
 
-        const decoded = jwt.verify(token, process.env.JWT_SECRET || 'your_jwt_secret');
+        const decoded = jwt.verify(token, JWT_SECRET);
         const user = await User.findById(decoded.id).select('profileComplete profile');
 
         if (!user) {
@@ -540,4 +550,10 @@ app.get('/api/check-profile', async (req, res) => {
     }
 });
 // Start server
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(PORT, () => {
+        console.log(`Server running on port ${PORT}`);
+    });
+}
+
 module.exports = app;

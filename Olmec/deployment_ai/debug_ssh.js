@@ -1,12 +1,9 @@
 const { NodeSSH } = require('../deployment/node_modules/node-ssh');
+const { getSshConfig } = require('../deployment/loadConfig');
 const ssh = new NodeSSH();
 
 async function run() {
-    await ssh.connect({
-        host: '68.183.103.119',
-        username: 'root',
-        password: '2136109HNsj'
-    });
+    await ssh.connect(getSshConfig());
     const result = await ssh.execCommand('ls -la /opt/olmec/AI_Training/venv/bin');
     console.log('STDOUT:\n', result.stdout);
     console.log('STDERR:\n', result.stderr);

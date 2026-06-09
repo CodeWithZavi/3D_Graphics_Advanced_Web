@@ -2,6 +2,7 @@ node_modules/
 __pycache__/
 *.pyc
 .env
+deploy_config.env
 deploy_config.local.env
 AI_venv_HIDDEN/
 .venv/
@@ -25,5 +26,6 @@ api_uploads/
 api_outputs/
 previews/
 checkpoints/
+backend/uploads/
 .DS_Store
 Thumbs.db

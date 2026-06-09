@@ -9,7 +9,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-API_KEYS = os.getenv("OLMEC_API_KEYS", "OLMEC_DEV_KEY_99,ADMIN_SOTA_TOKEN").split(",")
+API_KEYS = [k.strip() for k in os.getenv("OLMEC_API_KEYS", "").split(",") if k.strip()]
+if not API_KEYS:
+    print("WARNING: OLMEC_API_KEYS not set. API authentication disabled for development.")
 UPLOAD_DIR = os.getenv("UPLOAD_DIR", "api_uploads")
 OUTPUT_DIR = os.getenv("OUTPUT_DIR", "api_outputs")
 os.makedirs(UPLOAD_DIR, exist_ok=True)
@@ -24,6 +26,8 @@ class GenRequest(BaseModel):
     resolution: Optional[int] = 128
 
 def verify_key(api_key: str):
+    if not API_KEYS:
+        return  # No keys configured, skip auth in development
     if api_key not in API_KEYS:
         raise HTTPException(status_code=403, detail="Invalid API Key")
 

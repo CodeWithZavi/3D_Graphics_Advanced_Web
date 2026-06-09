@@ -2,9 +2,10 @@ const { NodeSSH } = require('node-ssh');
 const ssh = new NodeSSH();
 const fs = require('fs');
 const path = require('path');
+const { getSshConfig } = require('./loadConfig');
 
 async function run() {
-    await ssh.connect({ host: '68.183.103.119', username: 'root', password: '2136109HNsj' });
+    await ssh.connect(getSshConfig());
     const x = async (cmd) => (await ssh.execCommand(cmd));
 
     console.log('Testing 3D generation...');

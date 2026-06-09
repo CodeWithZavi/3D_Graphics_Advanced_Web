@@ -182,52 +182,26 @@ function App() {
       });
     });
 
-    window.addEventListener("resize", () => {
-      handleResize({ canvas: fabricRef.current });
+    const onResize = () => handleResize({ canvas: fabricRef.current });
+    const onWheel = (event: WheelEvent) => handleCanvasZoom({ canvas: fabricRef.current!, options: { e: event } });
+    const onKeyDown = (e: KeyboardEvent) => handleKeyDown({
+      e,
+      canvas: fabricRef.current,
+      undo,
+      redo,
+      syncShapeInStorage,
+      deleteShapeFromStorage,
     });
 
-    window.addEventListener("wheel", (event) => {
-      handleCanvasZoom({ canvas: fabricRef.current!, options: { e: event } });
-    });
-
-    window.addEventListener("keydown", (e) => {
-      handleKeyDown({
-        e,
-        canvas: fabricRef.current,
-        undo,
-        redo,
-        syncShapeInStorage,
-        deleteShapeFromStorage,
-      });
-    });
+    window.addEventListener("resize", onResize);
+    window.addEventListener("wheel", onWheel);
+    window.addEventListener("keydown", onKeyDown);
 
     return () => {
-      /**
-       * dispose is a method provided by Fabric that allows you to dispose
-       * the canvas. It clears the canvas and removes all the event
-       * listeners
-       *
-       * dispose: http://fabricjs.com/docs/fabric.Canvas.html#dispose
-       */
       canvas.dispose();
-
-      // remove the event listeners
-      window.removeEventListener("resize", () => {
-        handleResize({
-          canvas: null,
-        });
-      });
-
-      window.removeEventListener("keydown", (e) =>
-        handleKeyDown({
-          e,
-          canvas: fabricRef.current,
-          undo,
-          redo,
-          syncShapeInStorage,
-          deleteShapeFromStorage,
-        })
-      );
+      window.removeEventListener("resize", onResize);
+      window.removeEventListener("wheel", onWheel);
+      window.removeEventListener("keydown", onKeyDown);
     };
   }, [canvasRef]); // run this effect only once when the component mounts and the canvasRef changes
 

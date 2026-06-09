@@ -2,16 +2,18 @@ const { NodeSSH } = require('node-ssh');
 const path = require('path');
 const { execSync } = require('child_process');
 const fs = require('fs');
+const { loadConfig } = require('./loadConfig');
 
 const ssh = new NodeSSH();
 
+const loadedConfig = loadConfig();
 const config = {
-    host: '68.183.103.119',
-    username: 'root',
-    password: '2136109HNsj',
-    remotePath: '/opt/olmec',
-    domain: 'salvatore.artdevelopers.site',
-    email: 'admin@artdevelopers.site'
+    host: loadedConfig.DEPLOY_HOST,
+    username: loadedConfig.DEPLOY_USERNAME,
+    password: loadedConfig.DEPLOY_PASSWORD,
+    remotePath: loadedConfig.DEPLOY_REMOTE_PATH || '/opt/olmec',
+    domain: loadedConfig.DEPLOY_DOMAIN,
+    email: loadedConfig.DEPLOY_EMAIL
 };
 
 function localExec(cmd, cwd = process.cwd()) {

@@ -1,10 +1,11 @@
 const { NodeSSH } = require('node-ssh');
 const fs = require('fs');
 const path = require('path');
+const { getSshConfig } = require('./loadConfig');
 const ssh = new NodeSSH();
 
 async function run() {
-    await ssh.connect({ host: '68.183.103.119', username: 'root', password: '2136109HNsj' });
+    await ssh.connect(getSshConfig());
 
     const localPath = path.resolve(__dirname, 'banana_test_output.glb');
     await ssh.getFile(localPath, '/tmp/banana_out.glb');

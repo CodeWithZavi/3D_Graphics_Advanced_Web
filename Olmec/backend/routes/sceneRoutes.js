@@ -1,23 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Scene = require('../models/Scene');
-const jwt = require('jsonwebtoken');
-
-// Middleware to verify JWT token
-const authenticateToken = (req, res, next) => {
-    const authHeader = req.headers['authorization'];
-    const token = authHeader && authHeader.split(' ')[1];
-
-    if (!token) {
-        return res.status(401).json({ message: 'Access token required' });
-    }
-
-    jwt.verify(token, process.env.JWT_SECRET || 'your-secret-key', (err, user) => {
-        if (err) return res.status(403).json({ message: 'Invalid token' });
-        req.user = user;
-        next();
-    });
-};
+const authenticateToken = require('../middleware/auth');
 
 // Save or update scene
 router.post('/save', authenticateToken, async (req, res) => {

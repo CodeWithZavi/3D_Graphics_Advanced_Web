@@ -1,8 +1,9 @@
 const { NodeSSH } = require('node-ssh');
+const { getSshConfig } = require('./loadConfig');
 const ssh = new NodeSSH();
 
 async function run() {
-    await ssh.connect({ host: '68.183.103.119', username: 'root', password: '2136109HNsj' });
+    await ssh.connect(getSshConfig());
     console.log('Checking venv/pip...');
     let r = await ssh.execCommand('ls -la /opt/olmec/AI/venv/bin/pip*');
     console.log(r.stdout);

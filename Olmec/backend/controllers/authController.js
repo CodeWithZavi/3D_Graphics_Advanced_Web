@@ -2,8 +2,13 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 
+const JWT_SECRET = process.env.JWT_SECRET;
+if (!JWT_SECRET) {
+    console.error('FATAL: JWT_SECRET environment variable is not set.');
+}
+
 const generateToken = (userId) => {
-    return jwt.sign({ id: userId }, process.env.JWT_SECRET || 'your_jwt_secret', {
+    return jwt.sign({ id: userId }, JWT_SECRET, {
         expiresIn: '24h'
     });
 };
@@ -93,5 +98,6 @@ exports.login = async (req, res) => {
 
 exports.oauthCallback = (req, res) => {
     const token = generateToken(req.user._id);
-    res.redirect(`http://localhost:5173/auth-success?token=${token}`);
+    const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:5173';
+    res.redirect(`${frontendUrl}/auth-success?token=${token}`);
 };

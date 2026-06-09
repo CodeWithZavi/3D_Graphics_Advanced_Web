@@ -1,9 +1,10 @@
 const { NodeSSH } = require('node-ssh');
 const path = require('path');
+const { getSshConfig } = require('./loadConfig');
 const ssh = new NodeSSH();
 
 async function run() {
-    await ssh.connect({ host: '68.183.103.119', username: 'root', password: '2136109HNsj' });
+    await ssh.connect(getSshConfig());
     const x = async (cmd) => (await ssh.execCommand(cmd));
 
     console.log('Uploading built frontend...');

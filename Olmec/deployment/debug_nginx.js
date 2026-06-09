@@ -1,11 +1,8 @@
 const { NodeSSH } = require('node-ssh');
+const { getSshConfig } = require('./loadConfig');
 const ssh = new NodeSSH();
 
-const config = {
-    host: '68.183.103.119',
-    username: 'root',
-    password: '2136109HNsj'
-};
+const config = getSshConfig();
 
 async function debugNginx() {
     await ssh.connect(config);

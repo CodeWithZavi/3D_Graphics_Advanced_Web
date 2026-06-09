@@ -29,7 +29,7 @@ async function deploy() {
 
     console.log('\nFINALIZING SERVER SETUP...');
     await ssh.execCommand(`cd ${config.DEPLOY_REMOTE_PATH}/backend && npm install`);
-    await ssh.execCommand(`cd ${config.DEPLOY_REMOTE_PATH}/backend && [ ! -f .env ] && echo "PORT=5000\nMONGO_URI=mongodb://127.0.0.1:27017/salvatore_db\nJWT_SECRET=your_strong_secret_here\nFRONTEND_URL=http://${config.DEPLOY_DOMAIN}" > .env`);
+    await ssh.execCommand(`cd ${config.DEPLOY_REMOTE_PATH}/backend && [ ! -f .env ] && echo "PORT=5000\nMONGO_URI=mongodb://127.0.0.1:27017/salvatore_db\nJWT_SECRET=$(openssl rand -hex 32)\nFRONTEND_URL=http://${config.DEPLOY_DOMAIN}" > .env`);
 
     const nginxConfig = `server {
     listen 80;

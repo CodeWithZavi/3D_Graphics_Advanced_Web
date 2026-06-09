@@ -69,8 +69,6 @@ export const handleCanvasMouseDown = ({
     return;
   }
 
-  canvas.isDrawingMode = false;
-
   // if target is the selected shape or active selection, set isDrawing to false
   if (
     target &&
@@ -197,6 +195,7 @@ export const handleCanvaseMouseMove = ({
         width: pointer.x - (shapeRef.current?.left || 0),
         height: pointer.y - (shapeRef.current?.top || 0),
       });
+      break;
 
     default:
       break;
